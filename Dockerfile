@@ -1,4 +1,5 @@
-FROM ubuntu:latest
+ARG ARCH=
+FROM ${ARCH}ubuntu:latest
 EXPOSE 53/udp
 EXPOSE 53/tcp
 RUN apt update
