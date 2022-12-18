@@ -1,1 +1,6 @@
 .env.sh
+data/app/hosts.d/*
+!data/app/hosts.d/.gitkeep
+data/etc/dnsmasq.d/*
+!data/etc/dnsmasq.d/README
+!data/etc/dnsmasq.d/dnsmasq.conf.example
