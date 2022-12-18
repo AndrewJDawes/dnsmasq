@@ -2,5 +2,5 @@
 if [ -f "getenv.sh" ]; then
     source getenv.sh
 fi
-eval_cmd="docker build -t $PROJECT_DOCKER_FULL_PATH ."
+eval_cmd="docker rm $PROJECT_DOCKER_CONTAINER_NAME"
 eval "$eval_cmd"
