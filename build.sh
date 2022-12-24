@@ -3,10 +3,13 @@ if [ -f "getenv.sh" ]; then
     source getenv.sh
 fi
 
-# Base command
+# INSTALL EMULATORS
+docker run --privileged --rm tonistiigi/binfmt --install all
+
+# BASE CMD
 eval_cmd_base="docker build -t $PROJECT_DOCKER_FULL_PATH"
 
-# SIMPLE
+# SIMPLE CMD
 eval_cmd_simple="$eval_cmd_base ."
 # eval "$eval_cmd_simple"
 
