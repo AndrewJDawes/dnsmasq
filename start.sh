@@ -7,7 +7,7 @@ eval_cmd="docker run \
 --name $PROJECT_DOCKER_CONTAINER_NAME \
 -p 53:53/udp \
 -p 53:53/tcp \
--v "$(pwd)"/data/app/hosts.d:/app/hosts.d 
+-v "$(pwd)"/data/app/hosts.d:/app/hosts.d \
 -v "$(pwd)"/data/etc/dnsmasq.d:/etc/dnsmasq.d \
 $PROJECT_DOCKER_FULL_PATH
 "
