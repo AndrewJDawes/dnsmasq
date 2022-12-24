@@ -8,6 +8,7 @@ eval_cmd="docker run \
 --network host \
 -v "$(pwd)"/data/app/hosts.d:/app/hosts.d \
 -v "$(pwd)"/data/etc/dnsmasq.d:/etc/dnsmasq.d \
+--restart unless-stopped \
 $PROJECT_DOCKER_FULL_PATH
 "
 # Below does not work because external requests will come in with the IP address assigned to host's network interface, not loopback
