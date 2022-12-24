@@ -1,12 +1,16 @@
-# Only bind to interfaces you need to bind to
-bind-interfaces
-# Don't use host's nameservers
-no-resolv
 # Use Google's nameservers
 server=8.8.8.8
 server=4.4.4.4
-# Reasonable cache size
-cache-size=1000
+# Only bind to interfaces you need to bind to
+bind-interfaces
+# Don't watch /etc/resolv.conf for changes and reload it
+no-poll
+# Don't use host's nameservers from /etc/resolv.conf
+no-resolv
+# Set cache size
+cache-size=2000
+# Disable negative caching, uncomment this.
+no-negcache
 # Explicitly define host-ip mappings
 # address=/router/10.1.1.1
 # address=/server/10.1.1.2
