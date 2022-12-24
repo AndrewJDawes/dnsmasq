@@ -2,6 +2,8 @@
 if [ -f "getenv.sh" ]; then
     source getenv.sh
 fi
+
+# Base command
 eval_cmd_base="docker build -t $PROJECT_DOCKER_FULL_PATH"
 
 # SIMPLE
