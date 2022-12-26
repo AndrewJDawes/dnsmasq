@@ -8,6 +8,7 @@ docker run --privileged --rm tonistiigi/binfmt --install all
 
 # BASE CMD
 eval_cmd_base="docker build -t $PROJECT_DOCKER_FULL_PATH"
+# eval_cmd_base="docker build --no-cache -t $PROJECT_DOCKER_FULL_PATH"
 
 # SIMPLE CMD
 eval_cmd_simple="$eval_cmd_base ."
